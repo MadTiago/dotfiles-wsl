@@ -1,0 +1,7 @@
+romkatv/powerlevel10k
+zsh-users/zsh-autosuggestions
+MichaelAquilina/zsh-you-should-use
+zsh-users/zsh-syntax-highlighting
+marlonrichert/zsh-autocomplete
+
+zsh-users/zsh-history-substring-search
