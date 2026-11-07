@@ -16,7 +16,7 @@ sudo apt install -y \
 # Install antibody
 curl -sfL https://git.io/antibody | sudo sh -s -- -b /usr/local/bin
 
-# Add zsh to valid shells
+# zsh path
 ZSH_PATH="$(command -v zsh)"
 
 # Bundle zsh plugins
