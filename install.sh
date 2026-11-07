@@ -22,18 +22,18 @@ ZSH_PATH="$(command -v zsh)"
 # Bundle zsh plugins
 antibody bundle < "$SCRIPT_DIR/zsh/.zsh_plugins.txt" > "$SCRIPT_DIR/zsh/.zsh_plugins.sh"
 
-# Install oh-my-zsh
-# --unattended will not try to change the default shell, and it also won't run zsh when the installation has finished
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
-
 # Create .fonts directory if it doesn't exist
 mkdir -p "$HOME/.fonts"
 
 # Stow dotfiles
 stow --dir="$SCRIPT_DIR" --target="$HOME" zsh
 stow --dir="$SCRIPT_DIR" --target="$HOME/.fonts" fonts
+
+# Install oh-my-zsh
+# --unattended will not try to change the default shell, and it also won't run zsh when the installation has finished
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
 
 # Refresh fonts cache
 fc-cache -fv
