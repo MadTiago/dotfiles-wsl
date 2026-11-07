@@ -32,7 +32,7 @@ stow --dir="$SCRIPT_DIR" --target="$HOME/.fonts" fonts
 # Install oh-my-zsh
 # --unattended will not try to change the default shell, and it also won't run zsh when the installation has finished
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 fi
 
 # Refresh fonts cache
