@@ -24,8 +24,11 @@ plugins=(git direnv)
 
 source $ZSH/oh-my-zsh.sh
 
-# zsh mad plugins
-source ~/.zsh_plugins.sh
+# source antidote
+source $HOME/.antidote/antidote.zsh
+
+# initialize plugins statically with ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
+antidote load
 
 # zsh-history-substring-search configuration
 bindkey '^[[A' history-substring-search-up

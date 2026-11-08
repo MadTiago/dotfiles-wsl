@@ -13,14 +13,13 @@ sudo apt install -y \
 	bat \
 	ripgrep
 
-# Install antibody
-curl -sfL https://git.io/antibody | sudo sh -s -- -b /usr/local/bin
+# Install antidote
+if [ ! -d "$HOME/.antidote" ]; then
+    git clone --depth=1 https://github.com/mattmc3/antidote.git "$HOME/.antidote"
+fi
 
 # zsh path
 ZSH_PATH="$(command -v zsh)"
-
-# Bundle zsh plugins
-antibody bundle < "$SCRIPT_DIR/zsh/.zsh_plugins.txt" > "$SCRIPT_DIR/zsh/.zsh_plugins.sh"
 
 # Create .fonts directory if it doesn't exist
 mkdir -p "$HOME/.fonts"
