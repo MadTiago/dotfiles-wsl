@@ -24,6 +24,9 @@ plugins=(git direnv)
 
 source $ZSH/oh-my-zsh.sh
 
+# aliases
+alias ap='ansible-playbook -K'
+
 # source antidote
 source $HOME/.antidote/antidote.zsh
 
@@ -38,3 +41,10 @@ bindkey '^[[B' history-substring-search-down
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ensure unique PATH entries and prioritize user binaries
+typeset -U path
+path=("$HOME/.local/bin" $path)
