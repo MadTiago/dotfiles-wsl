@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 alias ap='ansible-playbook -K'
+alias bat='batcat'
 
 # source antidote
 source $HOME/.antidote/antidote.zsh
